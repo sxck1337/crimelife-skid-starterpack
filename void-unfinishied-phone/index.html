@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>voidhud</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgba(255,255,255,0);width: 100%;height: 100%; user-select: none;">
+    <div class="col" style="position: relative;position: right;width: 100%;height: 100%;padding-right: 0px;padding-left: 0px;">
+        <div class="row" style="bottom: 0px;/*position: relative;*/position: fixed;float: right;margin-right: -17px;margin-left: 0px;width: 318px;right: 0;/*transform: translateX(500%);*/">
+            <div class="col" id="wallpaper" style="position: absolute;float: right;padding-right: 0px;padding-left: 0px;width: 219px;background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85)), url(&quot;assets/img/6f06b1e7967cf5754af61e86cd617fdc.gif&quot;) center / cover no-repeat, #1a1d24;margin-left: 25px;margin-top: 28px;border-radius: 34px;height: 456px;"></div>
+            <div class="col" id="wallpaper-apps" style="position: absolute;float: right;padding-right: 0px;padding-left: 0px;width: 219px;background: rgba(31,34,43,0);margin-left: 25px;margin-top: 28px;border-radius: 34px;height: 456px;"></div>
+            <div class="col" id="frame" style="float: right;padding-right: 0px;padding-left: 0px;width: auto;height: auto;">
+                <div is="mainrow" class="row">
+
+                    <!-- HOMESCREEN -->
+
+
+                    <div class="col" id="homescreen-1" style="transition: opacity 600ms, visibility 600ms;position: absolute;float: right;padding-right: 0px;padding-left: 0px;width: 219px;background: rgba(255,255,255,0);margin-left: 40px;margin-top: 28px;border-radius: 34px;height: 456px;">
+                        <div class="row" id="taskleiste-1">
+                            <div class="col">
+                                <h1 style="color: rgb(255,255,255);font-family: Poppins, sans-serif;font-size: 10px;width: 32px;margin-bottom: 0px;margin-top: 9px;margin-left: 22px;">13:37</h1>
+                            </div>
+                            <div class="col col-md-2"><i class="fas fa-signal" style="color: rgb(255,255,255);margin-left: -28px;font-size: 10px;"></i></div>
+                        </div>
+                        <div class="row" id="top-app-row" style="margin-right: 0px;margin-left: 0px;">
+                            <div class="col" style="margin-top: 20px;margin-left: 5px;margin-right: 5px;"><button class="btn" data-bss-hover-animate="pulse" id="profile-app" type="button" style="color: rgb(255,255,255);background: var(--orange);width: 38px;height: 38px;margin-left: 8px;"><i class="fa fa-user" style="margin-top: 0px;"></i></button><button class="btn" data-bss-hover-animate="pulse" id="frak-app" type="button" style="color: rgb(255,255,255);background: var(--danger);width: 38px;height: 38px;margin-left: 25px;"><i class="fa fa-users" style="margin-top: 0px;margin-left: -3px;"></i></button><button class="btn" data-bss-hover-animate="pulse" id="funk-app" type="button" style="color: rgb(255,255,255);background: var(--green);width: 38px;height: 38px;margin-left: 25px;"><i class="fas fa-microphone" style="margin-top: 0px;"></i></button></div>
+                        </div>
+                        <div class="row" id="bottom-app-row" style="margin-right: 0px;margin-left: 0px;margin-top: 285px;">
+                            <div class="col" style="margin-top: 13px;margin-left: 15px;margin-right: 15px;height: 55px;padding-top: 8px;background: rgba(145,145,145,0.25);border-radius: 10px;padding-right: 0px;padding-left: 0px;"><button class="btn" data-bss-hover-animate="pulse" id="telefon-app" type="button" style="color: rgb(255,255,255);background: var(--blue);width: 38px;height: 38px;margin-left: 12px;"><i class="fas fa-phone" style="margin-top: 0px;margin-left: -2px;"></i></button><button class="btn" data-bss-hover-animate="pulse" id="gps-app" type="button" style="color: rgb(255,255,255);background: var(--purple);width: 38px;height: 38px;margin-left: 25px;"><i class="fas fa-location-arrow" style="margin-top: 0px;margin-left: -2px;"></i></button><button class="btn" data-bss-hover-animate="pulse" id="settings-app" onclick="opensettings()" type="button" style="color: rgb(255,255,255);background: var(--secondary);width: 38px;height: 38px;margin-left: 25px;"><i class="fas fa-cog" style="margin-top: 0px;margin-left: -2px;"></i></button></div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- SETTINGS -->
+
+
+                    <div class="col" id="settings-page" style="transition: opacity 600ms, visibility 600ms; opacity: 0; visibility: hidden; display: none;position: absolute;float: right;padding-right: 0px;padding-left: 0px;width: 219px;background: rgba(255,255,255,0);margin-left: 40px;margin-top: 28px;border-radius: 34px;height: 456px;">
+                        <div class="row" id="taskleiste-1">
+                            <div class="col">
+                                <h1 style="color: rgb(255,255,255);font-family: Poppins, sans-serif;font-size: 10px;width: 32px;margin-bottom: 0px;margin-top: 9px;margin-left: 22px;">13:37</h1>
+                            </div>
+                            <div class="col col-md-2"><i class="fas fa-signal" style="color: rgb(255,255,255);margin-left: -28px;font-size: 10px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="margin-top: 13px;">
+                                <h1 style="font-size: 15px;margin-left: 18px;font-family: Poppins, sans-serif;font-weight: 600;color: #2b7ef9;width: 184px;padding-bottom: 7px;border-bottom: 1px solid rgb(85,85,85);">&nbsp;Einstellungen</h1>
+                            </div>
+                        </div>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-toggle="dropdown" data-bss-hover-animate="pulse" type="button" style="background: #3a3d4f;margin-left: 15px;border-radius: 10px;font-size: 13px;width: 189.969px;height: 37px;border-style: none;">Wallpaper&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>
+                            <div class="dropdown-menu" style="width: 194px;margin-left: -1px;margin-top: 4px;border-radius: 10px;"><input type="url" id="bg-url" style="margin-left: 14px;border-radius: 0px;padding-left: 5px;padding-right: 5px;width: 164px;color: rgb(0,0,0);outline: none;border-style: none;border-color: rgb(105,105,105);border-bottom-width: 1px;border-bottom-style: solid;text-align: center;margin-top: 4px;" placeholder="https://deinlink.com" spellcheck="false"><a onclick="changebgurl()" class="dropdown-item" id="save-bg-btn" href="#" style="text-align: center;margin-top: 7px;">Speichern</a><a onclick="restorebg()" class="dropdown-item" id="save-bg-btn" href="#" style="text-align: center;margin-top: 7px;">Reset</a></div>
+                        </div>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-toggle="dropdown" data-bss-hover-animate="pulse" type="button" style="background: #3a3d4f;margin-left: 15px;border-radius: 10px;font-size: 13px;width: 189.969px;height: 37px;border-style: none;margin-top: 8px;">Klingelton&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</button>
+                            <div class="dropdown-menu" style="width: 194px;margin-top: 4px;margin-left: -1px;border-radius: 10px;"><a class="dropdown-item" id="klingel-1" href="#" style="text-align: center;">Klingelton 1</a><a class="dropdown-item" id="klingel-2" href="#" style="text-align: center;">Klingelton 2</a><a class="dropdown-item" id="klingel-3" href="#" style="text-align: center;">Klingelton 3</a></div>
+                        </div><button onclick="backtohome()" class="btn" data-bss-hover-animate="pulse" type="button" style="width: 124.969px;margin-left: 47px;margin-top: 286px;height: 5px;padding: 0px;background: rgba(255,255,255,0.8);"></button>
+                    </div>
+
+                    
+
+                </div><img src="assets/img/image.png" style="width: 270px;">
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+
+    <script>
+   
+
+    function opensettings(){
+        var settingspage = document.getElementById("settings-page")
+        var wallpaperapps = document.getElementById("wallpaper-apps")
+        var homescreen = document.getElementById("homescreen-1")
+        var mainrow = document.getElementById("mainrow")
+
+        wallpaperapps.style.transition = "all 0.5s";
+
+        settingspage.style.visibility = "visible";
+        settingspage.style.opacity = "1";
+        settingspage.style.animation = "fade 0.5s";
+
+        settingspage.style.display = "block";
+        homescreen.style.display = "none";
+        homescreen.style.opacity = "0";
+        homescreen.style.visibility = "hidden";
+        wallpaperapps.style.backgroundColor = "rgba(31,34,43,255)";
+
+       
+    
+    }      
+
+    function backtohome(){
+        var settingspage = document.getElementById("settings-page")
+        var wallpaperapps = document.getElementById("wallpaper-apps")
+        var homescreen = document.getElementById("homescreen-1")
+        var mainrow = document.getElementById("mainrow")
+
+        wallpaperapps.style.transition = "all 0.5s";
+
+        settingspage.style.visibility = "hidden";
+        settingspage.style.opacity = "0";
+
+        homescreen.style.visibility = "visible";
+        homescreen.style.opacity = "1";
+        homescreen.style.animation = "fade 0.5s";
+
+        settingspage.style.display = "none";
+        homescreen.style.display = "block";
+        homescreen.style.transition = "all 0.5s";
+        wallpaperapps.style.backgroundColor = "rgba(31,34,43,0)";
+
+    }
+
+    function changebgurl(){
+        var inputVal = document.getElementById("bg-url").value;
+
+        regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+        if (regexp.test(inputVal))
+        {
+            document.getElementById("wallpaper").style.background = 'linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85)), url(' + inputVal + ') center / cover no-repeat'
+        }
+        else
+        {
+            mp.trigger("Client:ShowNotify", [`fa fa-times`, `Der eingegebene Link ist ungültig!`, `red`, 5000]);
+           
+        }
+
+        
+        
+
+
+    }
+
+    function restorebg(){
+
+        var inputVal = document.getElementById("bg-url").value;
+
+        document.getElementById("wallpaper").style.background = 'linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85)), url(assets/img/6f06b1e7967cf5754af61e86cd617fdc.gif) center / cover no-repeat'
+
+
+}
+
+
+    </script>
+
+</body>
+
+</html>

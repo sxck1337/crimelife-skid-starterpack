@@ -1,0 +1,65 @@
+.progress-bar {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*overflow: hidden;*/
+  /*color: #fff;*/
+  /*text-align: center;*/
+  /*white-space: nowrap;*/
+  /*border-radius: 20px;*/
+  /*background-color: #ffffff;*/
+  /*transition: width .6s ease;*/
+}
+
+#nigga {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 20px;
+  background-color: rgba(255,83,83,0.8);
+  transition: width .6s ease;
+}
+
+#nigga1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.8);
+  transition: width .6s ease;
+}
+
+#nigga2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 20px;
+  background-color: rgba(63,93,207,0.8);
+  transition: width .6s ease;
+}
+
+#nigga3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 20px;
+  background-color: rgba(121,221,119,0.8);
+  transition: width .6s ease;
+}
+

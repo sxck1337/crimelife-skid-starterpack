@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>voidhud</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Slider-Range.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="width: 100%;height: 100%;background: rgba(255,255,255,0);">
+    <div class="card" id="left-bar" style="/*bottom: 0;*/margin: 0;position: absolute;top: 50%;/*left: 50%;*//*transform: translate(-50%);*/width: 323px;height: 555px;border-radius: 10px;background: #1f222b;box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.26);margin-left: 78px;margin-top: -330px;">
+        <div class="row" style="margin-right: 0px;margin-left: 0px;height: 86px;border-top-left-radius: 10px;border-top-right-radius: 10px;background: rgba(43,126,249,0);">
+            <div class="col" style="text-align: center;margin-right: 25px;margin-left: 25px;border-bottom: 1px solid #676767;margin-bottom: 6px;"><img src="assets/img/voidlogo.png" style="width: 110px;margin-top: 12px;"></div>
+        </div>
+        <div class="card-body" style="padding: 0px;overflow: auto;height: 375.125px;width: 316px;">
+            <div class="col" style="padding: 0px;overflow: auto;height: 407px;overflow-x: hidden;margin-top: 24px;">
+                <div class="slidecontainer" style="margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Geschlecht</h1><input onchange="changeGender()" type="range" id="myRange-7" class="slider" min="1" max="2" value="1" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Hautfarbe</h1><input type="range" id="myRange-4" class="slider" min="0" max="100" value="50" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-left: 11px;margin-top: 21px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Hautfarbe</h1><input type="range" id="myRange-3" class="slider" min="0" max="100" value="50" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Hautfarbenanteil</h1><input type="range" id="myRange-6" class="slider" min="0" max="100" value="50" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Augenfarbe</h1><input onchange="changeEyecolor()" type="range" id="myRange-2" class="slider" min="1" max="10" value="1" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Vater</h1><input onchange="changefather()" type="range" id="myRange-1" class="slider" min="1" max="24" value="1" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Mutter</h1><input onchange="changemother()" type="range" id="myRange" class="slider" min="1" max="22" value="1" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+                <div class="slidecontainer" style="margin-top: 21px;padding-top: 0px;margin-left: 11px;">
+                    <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Formanteil</h1><input type="range" id="myRange-5" class="slider" min="0" max="100" value="50" style="border-radius: 10px;width: 266px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="left-bar" style="bottom: 0;margin: 0;position: absolute;top: 50%;/*left: 50%;*//*transform: translate(-50%);*/width: 323px;height: 68px;border-radius: 10px;background: #1f222b;box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.26);margin-left: 78px;margin-top: 244px;">
+        <div class="row d-xl-flex align-items-xl-center" style="margin-right: 0px;margin-left: 0px;border-top-left-radius: 10px;border-top-right-radius: 10px;background: rgba(43,126,249,0);border-style: none;height: 104p;margin-top: 10px;">
+            <div class="col d-xl-flex align-items-xl-center" style="text-align: center;margin-right: 25px;margin-left: 25px;margin-bottom: 6px;border-bottom: 1px none #676767;margin-top: 4px;"><button onclick="resetnigger()" data-bss-hover-animate="pulse" class="btn btn-danger" type="button" style="border-radius: 10px;width: 97.4688px;font-family: Poppins, sans-serif;margin-left: -20px;">Reset</button><button data-bss-hover-animate="pulse" onclick="getgased()" class="btn btn-success" type="button" style="float: right;width: 97.4688px;border-radius: 10px;height: 38p;font-family: Poppins, sans-serif;margin-left: 88px;">Fertig</button></div>
+        </div>
+    </div>
+    <div class="card" id="bottom-bar" style="bottom: 0;margin: 0;position: absolute;/*top: 50%;*/left: 50%;transform: translate(-50%);width: 478px;height: 86px;border-radius: 10px;background: rgb(31,34,43);box-shadow: 0px 0px 9px 1px rgba(0,0,0,0.26);margin-bottom: 64px;">
+        <div class="card-body" style="padding: 0px;">
+            <div class="slidecontainer" style="margin-top: 16px;">
+                <h1 style="text-align: center;color: rgb(244,244,244);font-size: 15px;font-family: Poppins, sans-serif;">Rotation</h1><input type="range" id="myRange-8" class="slider" min="0" max="360" value="180" style="border-radius: 10px;margin-left: 18px;padding-left: 5px;padding-right: 5px;height: 18px;width: 440px;">
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        let gender = "Mann";
+        let skincolor = 12;
+        let father = 44;
+        let mother = 45;
+        let skinmix = 0.5;
+        let eyecolor = 10;
+        
+        function resetnigger(){
+            document.getElementById("myRange").value = "1"
+            document.getElementById("myRange-1").value = "1"
+            document.getElementById("myRange-2").value = "1"
+            document.getElementById("myRange-3").value = "1"
+            document.getElementById("myRange-4").value = "1"
+            document.getElementById("myRange-5").value = "1"
+            document.getElementById("myRange-6").value = "1"
+            document.getElementById("myRange-7").value = "1"
+            document.getElementById("myRange-8").value = "180"
+            gender = "Mann"
+        
+            changeskincolor()
+            changeEyecolor()
+            changefather()
+            changemother()
+            updateChar()
+        }
+        
+        function getgased(){
+            if (gender == "Mann") {
+                
+                mp.trigger("CharCreator:Einreisen", "mp_m_freemode_01", skincolor, father, mother, skinmix, eyecolor)
+        
+        }
+          else if (gender == "Frau")  {
+                mp.trigger("CharCreator:Einreisen", "mp_f_freemode_01", skincolor, father, mother, skinmix, eyecolor)       
+        
+        }
+        
+            
+        }
+        
+        function updateChar(){
+            if (gender == "Mann") {
+                
+                    mp.trigger("CharCreator:UpdateChar", "mp_m_freemode_01", skincolor, father, mother, skinmix, eyecolor)
+            
+            }
+              else if (gender == "Frau")  {
+                    mp.trigger("CharCreator:UpdateChar", "mp_f_freemode_01", skincolor, father, mother, skinmix, eyecolor)       
+           
+            }
+        }
+        
+        function einreisen(){
+            switch (gender) {
+                case "Mann":
+                    mp.trigger("CharCreator:Einreisen", "mp_m_freemode_01", skincolor, father, mother, skinmix, eyecolor)
+        
+                case "Frau":
+                    mp.trigger("CharCreator:Einreisen", "mp_f_freemode_01", skincolor, father, mother, skinmix, eyecolor)       
+           
+            }
+        }
+        
+        function changeGender(){
+            let value = document.getElementById("myRange-7").value; 
+            if(value == 1){
+                gender = "Mann"
+                
+            } 
+            else if(value == 2){
+                gender = "Frau"
+                
+            } 
+            updateChar()
+        }
+        
+        function changeskincolor(){
+            let value = document.getElementById("myRange-1").value; 
+            if(value == 1){
+                skincolor = 12;
+                
+            } 
+            else if(value == 2){
+                skincolor = 11;
+                
+            } 
+            else if(value == 3){
+                skincolor = 10;
+                
+            } 
+            else if(value == 4){
+                skincolor = 9;
+                
+            } 
+            else if(value == 5){
+                skincolor = 8;
+                
+            } 
+            else if(value == 6){
+                skincolor = 7;
+                
+            } 
+            else if(value == 7){
+                skincolor = 6;
+                
+            } 
+            else if(value == 8){
+                skincolor = 5;
+                
+            } 
+            else if(value == 9){
+                skincolor = 4;
+                
+            } 
+            else if(value == 10){
+                skincolor = 3;
+                
+            } 
+            else if(value == 11){
+                skincolor = 2;
+                
+            } 
+            else if(value == 12){
+                skincolor = 1;
+                
+            } 
+            else if(value == 13){
+                skincolor = 0;
+                
+            } 
+        
+            updateChar()
+        }
+        
+        
+        function changefather(){
+            let value = document.getElementById("myRange-1").value; 
+            if(value == 1){
+                father = 44;
+            } 
+            else if(value == 2){
+                father = 43;
+            } 
+            else if(value == 3){
+                father = 42;
+            } 
+            else if(value == 4){
+                father = 20;
+            } 
+            else if(value == 5){
+                father = 19;
+            } 
+            else if(value == 6){
+                father = 18;
+            } 
+            else if(value == 7){
+                father = 17;
+            } 
+            else if(value == 8){
+                father = 16;
+            } 
+            else if(value == 9){
+                father = 15;
+            } 
+            else if(value == 10){
+                father = 14;
+            } 
+            else if(value == 11){
+                father = 13;
+            } 
+            else if(value == 12){
+                father = 12;
+            } 
+            else if(value == 13){
+                father = 11;
+            } 
+            else if(value == 14){
+                father = 10;
+            } 
+            else if(value == 15){
+                father = 9;
+            } 
+            else if(value == 16){
+                father = 8;
+            } 
+            else if(value == 17){
+                father = 7;
+            } 
+            else if(value == 18){
+                father = 6;
+            } 
+            else if(value == 19){
+                father = 5;
+            } 
+            else if(value == 20){
+                father = 4;
+            } 
+            else if(value == 21){
+                father = 3;
+            } 
+            else if(value == 22){
+                father = 2;
+            } 
+            else if(value == 23){
+                father = 1;
+            } 
+            else if(value == 24){
+                father = 0;
+            } 
+           
+        
+            updateChar()
+        }
+        
+        function changemother(){
+            let value = document.getElementById("myRange").value; 
+            if(value == 1){
+                mother = 45;
+            } 
+            else if(value == 2){
+                mother = 41;
+            } 
+            else if(value == 3){
+                mother = 40;
+            } 
+            else if(value == 4){
+                mother = 39;
+            } 
+            else if(value == 5){
+                mother = 38;
+            } 
+            else if(value == 6){
+                mother = 37;
+            } 
+            else if(value == 7){
+                mother = 36;
+            } 
+            else if(value == 8){
+                mother = 35;
+            } 
+            else if(value == 9){
+                mother = 34;
+            } 
+            else if(value == 10){
+                mother = 33;
+            } 
+            else if(value == 11){
+                mother = 32;
+            } 
+            else if(value == 12){
+                mother = 31;
+            } 
+            else if(value == 13){
+                mother = 30;
+            } 
+            else if(value == 14){
+                mother = 29;
+            } 
+            else if(value == 15){
+                mother = 28;
+            } 
+            else if(value == 16){
+                mother = 27;
+            } 
+            else if(value == 17){
+                mother = 26;
+            } 
+            else if(value == 18){
+                mother = 25;
+            } 
+            else if(value == 19){
+                mother = 24;
+            } 
+            else if(value == 20){
+                mother = 23;
+            } 
+            else if(value == 21){
+                mother = 22;
+            } 
+            else if(value == 22){
+                mother = 21;
+            } 
+        
+            updateChar()
+        }
+        
+        
+        
+        function changeEyecolor(){
+            let value = document.getElementById("myRange-2").value; 
+            if(value == 10){
+                eyecolor = 0;
+            }
+            else if(value == 9){
+                eyecolor = 1;
+            }
+            else if(value == 8){
+                eyecolor = 2;
+            }
+            else if(value == 7){
+                eyecolor = 3;
+            }
+            else if(value == 6){
+                eyecolor = 4;
+            }
+            else if(value == 5){
+                eyecolor = 5;
+            }
+            else if(value == 4){
+                eyecolor = 6;
+            }
+            else if(value == 3){
+                eyecolor = 7;
+            }
+            else if(value == 2){
+                eyecolor = 8;
+            }
+            else if(value == 1){
+                eyecolor = 9;
+            }
+            console.log(eyecolor)
+        
+            updateChar()
+        }
+        
+            </script>
+</body>
+
+</html>

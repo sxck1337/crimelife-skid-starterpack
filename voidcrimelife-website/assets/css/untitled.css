@@ -1,0 +1,104 @@
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #ffffff;
+}
+
+#mainNav .navbar-brand {
+  color: #ffffff;
+}
+
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #b4b4b4;
+  /*text-decoration: underline;*/
+}
+
+a {
+  color: #9f4edf;
+  transition: all .35s;
+}
+
+.btn-outline-warning {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled).active:focus, .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-warning.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgb(255,255,255);
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled).active, .btn-outline-warning:not(:disabled):not(.disabled):active, .show > .btn-outline-warning.dropdown-toggle {
+  color: #212529;
+  background-color: rgb(255,255,255);
+  border-color: rgb(255,255,255);
+}
+
+.btn.active, .btn:active, .btn:focus, .btn:hover {
+  color: #1c1c1c;
+  border-color: rgb(255,255,255);
+  background-color: rgb(255,255,255);
+}
+
+.btn-outline-warning.focus, .btn-outline-warning:focus {
+  box-shadow: 0 0 0 .2rem rgb(255,255,255);
+}
+
+.bg-primary {
+  background: #ffffff;
+  background: linear-gradient(#fff,#fff);
+}
+
+.btn.btn-outline-warning.btn-xl.js-scroll-trigger {
+}
+
+#gey:focus, #gey:hover {
+  background-color: #000000;
+  color: rgb(255,255,255)!important;
+}
+
+#mainNav .navbar-nav > li > a:focus:hover, #mainNav .navbar-nav > li > a:hover {
+  color: #ffffff;
+}
+
+.nav-link:focus, .nav-link:hover {
+  text-decoration: underline;
+}
+
+#mainNav .navbar-nav > li > a.active {
+  color: #9f4edf!important;
+}
+
+@media (min-width:992px) {
+  #mainNav .navbar-nav > li > a:focus:hover, #mainNav .navbar-nav > li > a:hover {
+    color: #fff;
+  }
+}
+
+#mainNav.navbar-shrink {
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.27);
+}
+
+.navbar-brand.js-scroll-trigger.active:hover {
+  color: #9f4edf!important;
+  /*text-decoration: underline;*/
+}
+
+#mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+  color: #9f4edf!important;
+  text-decoration: underline;
+}
+
+#mainNav.navbar-shrink .a:focus, #mainNav.navbar-shrink #a:hover {
+  /*color: #9f4edf!important;*/
+}
+
+#mainNav.navbar-shrink .a:focus, #mainNav.navbar-shrink .a:hover {
+  color: #9f4edf!important;
+}
+
+#mainNav.navbar-shrink .navbar-nav > li > a:hover {
+  color: #9f4edf!important;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+

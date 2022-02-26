@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;backdrop-filter: blur(10px);">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>execv2</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Almarai">
+    <link rel="stylesheet" href="assets/css/GeosansLight.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgba(255,255,255,0);height: 100%;">
+    <section class="features-boxed" style="background: rgba(0,0,0,0);height: 100%;">
+        <div style="/*z-index: 0;*/position: absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.2);">
+            <div style="/*z-index: 0;*/position: absolute;width: 100%;height: 100%;background: rgba(0,0,0,0);"><canvas class="background" style="
+  position: absolute;
+  width: 100%;
+  height: 100%;"></canvas></div>
+        </div>
+
+
+
+
+        <div id="register" class="container" style="display: block; padding-right: 0px;padding-left: 0px;width: 100%;float: right;max-width: 100%;height: 100%;">
+            <div class="row justify-content-center features" style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);color: rgb(255,255,255);">
+                <div class="card text-center shadow pulse animated mb-4" style="width: 508.984px;background: rgb(28,30,71);height: 295px;margin-top: 0px;color: rgb(49, 52, 55);border-radius: 4px;margin-left: 30px;border-style: none;border-top: 25px none #e20026;border-right-style: none;border-bottom: 24px solid rgba(69,72,149,0.79);">
+                    <div class="row" style="margin-right: 0px;margin-left: 0px;border-right-style: none;height: 405px;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="text-align: center;color: rgb(255,255,255);margin-top: 20px;user-select: none;font-family: Abel, sans-serif;border-bottom: 1px none rgba(179,179,179,0.32);">Welcome</p>
+                                </div>
+                            </div><form>
+                            <p id="Response" style="margin-top: -15px;color: rgb(205,205,205);visibility: hidden;">Error Message</p>
+                            <input type="#{type}" id="Username" style="width: 317px;margin-top: -6px;height: 33px;background: #131743;border-style: solid;border-color: rgba(69,72,149,0.79);border-radius: 4px;color: rgb(205,205,205);text-align: center;font-family: Abel, sans-serif;outline: none;" placeholder="vorname_nachname" spellcheck="false">
+                            <input type="password" id="Password" style="width: 317px;height: 33px;margin-top: 36px;color: rgb(205,205,205);font-family: Abel, sans-serif;background: #131743;border-radius: 4px;border: 2px solid rgba(69,72,149,0.79);text-align: center;outline: none;" placeholder="passwort" spellcheck="false">
+                            <button onclick="next()" class="btn button" data-bss-hover-animate="pulse" type="button" style="margin-top: 28px;color: rgb(205,205,205);font-family: Abel, sans-serif;width: 182.078px;"><i class="fas fa-check" style="margin-right: 10px;color: rgb(205,205,205);"></i>Login</button>
+                        </form> </div>
+                    </div>
+                    <p style="position: absolute;color: rgb(255,255,255);font-size: 13px;font-family: Abel, sans-serif;width: 79.969px;margin-top: 273px;margin-left: 424px;">void | crimelife</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.js"></script>
+   <script src="assets/js/app.js"></script>
+
+   <script>
+    var val;
+    function next(){
+        let name = document.getElementById("Username").value;
+        let pw = document.getElementById("Password").value;
+
+        if(name.length < 5) return showNotify("name zu kurz!");
+        if(pw.length < 2) return showNotify("passwort zu kurz!");
+
+        if(name.includes("_")){
+            mp.trigger("Login!TryLogin", name, pw)
+        } else {
+            showNotify("unterstrich im namen fehlt!")
+            return;
+        }
+    }
+
+    function showNotify(message){
+        clearTimeout(val)
+        document.getElementById("Response").style.visibility = "visible";
+        document.getElementById("Response").innerText = message;
+        val = setTimeout(() => {
+            document.getElementById("Response").style.visibility = "hidden";
+        }, 3000);
+    }
+
+   /* function updatePlayers(amount){
+        document.getElementById("playeronserveramount").innerHTML = amount+"/300"
+    } */
+</script>
+
+</body>
+
+</html>

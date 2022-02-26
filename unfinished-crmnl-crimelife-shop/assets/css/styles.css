@@ -1,0 +1,42 @@
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,0)!important;
+}
+
+#levelstuff:focus, #levelstuff:hover {
+  color: var(--bs-blue)!important;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d1c2c;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #14131e;
+}
+
+::-webkit-scrollbar-track {
+  background: #282737;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

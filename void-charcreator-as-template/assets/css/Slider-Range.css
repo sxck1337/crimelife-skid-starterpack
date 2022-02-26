@@ -1,0 +1,33 @@
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #1f1f2b;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+#myRange::-webkit-slider-thumb {
+  background: #726abf;
+}
+
+#myRange::-webkit-slider-thumb, #myRange-1::-webkit-slider-thumb, #myRange-2::-webkit-slider-thumb, #myRange-3::-webkit-slider-thumb, #myRange-4::-webkit-slider-thumb, #myRange-5::-webkit-slider-thumb, #myRange-6::-webkit-slider-thumb, #myRange-7::-webkit-slider-thumb, #myRange-8::-webkit-slider-thumb, #myRange-9::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 10px;
+  background: #726abf;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
